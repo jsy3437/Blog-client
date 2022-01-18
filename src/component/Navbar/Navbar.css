@@ -1,0 +1,30 @@
+.nav_wrap {
+	padding: 1vw;
+}
+
+.nav_flexBox {
+	display: flex;
+	justify-content: space-between;
+}
+
+.nav_user_flexBox,
+.nav_menu_flexBox {
+	display: flex;
+}
+
+.nav_user_flexBox {
+	font-size: 1.5rem;
+	justify-content: flex-end;
+}
+
+.nav_user_flexBox > a {
+	margin: 0.5rem;
+}
+
+.nav_menu_flexBox {
+	font-size: 2rem;
+}
+
+.nav_menu_flexBox > li {
+	margin-left: 2rem;
+}

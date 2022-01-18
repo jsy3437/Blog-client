@@ -1,0 +1,56 @@
+.profile_wrap {
+	padding: 50px 0;
+	background-color: #0084ff0e;
+	border-top: 1px solid #0084ff4f;
+	border-bottom: 1px solid #0084ff4f;
+}
+
+.pf_gridBox {
+	display: grid;
+}
+.pf_gridBox > div {
+	width: 500px;
+	border: 1px solid #0084ff4f;
+	background-color: #ffffff;
+	margin: 10px auto;
+}
+
+.pf_gridBox > div > .content {
+	padding: 20px 30px;
+	font-size: 1.7rem;
+}
+
+.pf_gridBox > div > .content > img {
+	width: 100px;
+	margin: 10px;
+}
+.pf_gridBox > div > .content > p {
+	margin: 10px;
+}
+
+.pf_gridBox > div > .title {
+	padding: 10px 15px;
+	border-bottom: 1px solid #0084ff4f;
+}
+
+.pf_gridBox > div > .title > p {
+	text-align: start;
+	color: rgb(39, 39, 39);
+	font-size: 2rem;
+}
+
+.write_writing_box > textarea {
+	width: 100%;
+	height: 500px;
+}
+
+.write_btn_box {
+	width: 100%;
+	display: flex;
+	justify-content: flex-end;
+}
+
+.write_btn_box > button {
+	width: 200px !important;
+	margin: 50px 0px 50px 20px !important;
+}

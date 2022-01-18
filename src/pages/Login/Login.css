@@ -1,0 +1,9 @@
+.login_wrap {
+	margin: 150px;
+}
+
+.login_box {
+	width: 300px;
+	font-size: 2rem;
+	margin: 50px auto;
+}

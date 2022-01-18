@@ -8,6 +8,7 @@ import BlogList from './pages/BlogList/BlogList';
 import BlogDetail from './pages/BlogDetail/BlogDetail';
 import Navbar from './component/Navbar/Navbar';
 import Footer from './component/Footer/Footer';
+import BlogWrite from './pages/BlogWrite/BlogWrite';
 
 function App() {
 	return (
@@ -21,6 +22,7 @@ function App() {
 					<Route exact path="/profile" component={Profile} />
 					<Route exact path="/list" component={BlogList} />
 					<Route exact path="/detail" component={BlogDetail} />
+					<Route exact path="/write" component={BlogWrite} />
 				</Switch>
 				<Footer />
 			</div>

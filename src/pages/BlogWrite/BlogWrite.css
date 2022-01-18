@@ -1,0 +1,47 @@
+.write_wrap {
+	background-color: #0084ff0e;
+	border-top: 1px solid #0084ff;
+	border-bottom: 1px solid #0084ff;
+	padding: 80px;
+}
+
+.write_box {
+	width: 700px;
+	margin: 50px auto;
+}
+
+.write_title_box > input {
+	width: 96%;
+	background-color: #fff;
+}
+
+.write_img_box > input {
+	display: block;
+	width: 96%;
+	background-color: rgb(235, 235, 235) !important;
+}
+
+.write_writing_box > textarea {
+	width: 96%;
+	background-color: #fff;
+	resize: none;
+}
+.write_fakeBtn_box {
+	width: 100%;
+	position: relative;
+}
+
+.write_fakeBtn_box > input {
+	width: 96%;
+	opacity: 0;
+}
+.write_fakeBtn.btn_link {
+	padding: 11px;
+	width: 96%;
+	position: absolute;
+	bottom: 2px;
+	margin: 0;
+	z-index: -1;
+	background-color: #0084ff;
+	color: #fff;
+}
