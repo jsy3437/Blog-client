@@ -1,0 +1,59 @@
+.footer_wrap {
+	background-color: rgb(212, 215, 223);
+	border-top: 30px solid rgb(51, 51, 51);
+	padding: 20px;
+}
+
+.foo_content_box {
+	max-width: 1000px;
+	display: flex;
+	justify-content: space-between;
+	margin: auto;
+}
+
+.foo_content_box > div > p {
+	font-size: 1.2rem;
+	text-align: start;
+}
+
+.foo_myInfo > img {
+	width: 150px;
+	height: 150px;
+}
+
+.foo_myInfo > p {
+	font-size: 1.4rem !important;
+	margin: 3px 0;
+}
+
+.foo_social > img {
+	width: 40px;
+	margin: 5px;
+}
+
+.foo_company {
+	padding-top: 10px;
+}
+
+.foo_company > p:nth-child(1) {
+	font-size: 2rem;
+	margin-bottom: 15px;
+}
+
+.footer_btn_box {
+	margin-right: 20px;
+}
+
+.footer_btn_box > p {
+	text-align: center !important;
+	margin-top: 5px;
+	padding: 2px 30px;
+	border: 1px solid rgb(77, 77, 77);
+	border-radius: 3px;
+	background-color: rgb(51, 51, 51);
+	color: #fff;
+}
+
+.foo_copyright {
+	margin: 30px auto 0px;
+}

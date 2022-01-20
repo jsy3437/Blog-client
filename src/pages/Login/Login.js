@@ -29,9 +29,13 @@ function Login() {
 		};
 
 		userController.login(body).then((res) => {
-			const { success } = res.data;
+			const { success, username } = res.data;
+			console.log(res.data);
 			if (success) {
+				alert(`${username} 님 환영합니다`);
 				history.push('/');
+			} else {
+				alert('아이디 또는 비밀번호를 확인해주세요');
 			}
 		});
 	};

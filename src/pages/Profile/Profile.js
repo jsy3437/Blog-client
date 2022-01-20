@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useEffect, useState } from 'react';
+import { Link, useParams } from 'react-router-dom';
 import './Profile.css';
 
 import * as userController from '../../controller/user';
@@ -7,11 +7,28 @@ import * as userController from '../../controller/user';
 import privacyIcon from '../../images/privacy.svg';
 
 function Profile() {
+	const { username } = useParams();
 	const list = ['게시물1', '게시물2', '게시물3'];
 	const [pwEl, setPwEl] = useState(false);
 	const [password, setPassword] = useState('');
 	const [newPw, setNewPw] = useState('');
 	const [newPwConfirm, setNewPwConfirm] = useState('');
+	const [userData, setUserData] = useState('');
+
+	useEffect(() => {
+		if (!userData) {
+			userController.getProfile(username).then((res) => {
+				const { success, user } = res.data;
+				console.log(res.data);
+				if (success) {
+					setUserData(user);
+				} else {
+					alert('올바르지 않은 요청입니다');
+				}
+			});
+		}
+	}, []);
+	// console.log(username);
 
 	const writeEl = list.map((el, idx) => (
 		<li>
@@ -46,6 +63,7 @@ function Profile() {
 			return alert('새 비밀번호와 새 비밀번호 확인이 일치하지 않습니다');
 		}
 		const body = {
+			username,
 			password,
 			newPw,
 		};
@@ -69,8 +87,8 @@ function Profile() {
 					</div>
 					<div className="privacy content">
 						<img src={privacyIcon} alt="privacyIcon" />
-						<p>닉네임 : uni</p>
-						<p>gusdo3437</p>
+						<p>닉네임 : {userData.nickname}</p>
+						<p>{userData.username}</p>
 						<button onClick={pwElSwitch}>비밀번호 변경</button>
 					</div>
 				</div>

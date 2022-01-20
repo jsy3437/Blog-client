@@ -1,0 +1,124 @@
+.detail_wrap {
+	background-color: #0084ff09;
+	border: 1px solid #0084ff25;
+	min-height: 70%;
+	padding: 50px;
+}
+
+.detail_box {
+	max-width: 1000px;
+	margin: auto;
+	padding: 30px 10px;
+	border: 1px solid #0084ff48;
+	background-color: #fff;
+}
+
+.detail_box > h1 {
+	margin-bottom: 5px;
+}
+
+.detail_title_box {
+	display: flex;
+	align-items: baseline;
+	justify-content: space-between;
+	padding-right: 1%;
+	border-bottom: 1px solid #0084ff7a;
+}
+
+.detail_title_box > div {
+	display: flex;
+	justify-content: end;
+	align-items: baseline;
+}
+
+.detail_title_box > div > p {
+	position: relative;
+	font-size: 1.5rem;
+	margin-left: 30px;
+}
+
+.detail_title_box > div:nth-child(1) > p {
+	margin-left: 10px;
+}
+
+.detail_title_box > div:nth-child(1) > p:nth-child(2) {
+	font-size: 1.1rem;
+}
+
+.detail_title_box > div > p:nth-child(2),
+.detail_title_box > div > p:nth-child(3) {
+	color: #6e6e6e;
+}
+
+.detail_like.like::before {
+	top: 5%;
+	left: -250%;
+}
+
+.detail_content_box {
+	padding: 30px 5px 0;
+}
+
+.detail_text_box {
+	margin-top: 20px;
+}
+
+.detail_text_box > p {
+	font-size: 1.5rem;
+	white-space: pre-wrap;
+	word-break: keep-all;
+	text-align: start;
+	line-height: 4rem;
+}
+
+.detail_bottom_box {
+	max-width: 1000px;
+	margin: auto;
+	display: flex;
+	justify-content: space-between;
+}
+
+.detail_profile_box {
+	display: flex;
+	max-width: 300px;
+	margin: 30px 0 30px 0;
+	padding: 30px 50px;
+	border: 1px solid #0084ff48;
+	background-color: #fff;
+}
+
+.detail_profile_box > img {
+	width: 100px;
+	height: 100px;
+}
+
+.detail_profile_box > div {
+	margin-left: 20px;
+	padding: 5% 0;
+}
+
+.detail_profile_box > div > p {
+	padding: 5px;
+	font-size: 1.5rem;
+}
+
+.detail_logo {
+	width: 200px;
+	margin: 30px 0 30px 0;
+	padding: 30px 50px;
+	/* border: 1px solid #0084ff48; */
+	background-color: #fff;
+}
+
+.detail_btn_box {
+	min-width: 200px;
+	margin: 30px 0 30px;
+	padding: 20px 0px 20px;
+	/* border: 1px solid #0084ff48; */
+	/* background-color: #fff; */
+}
+
+.detail_btn_box > button {
+	width: 200px !important;
+	margin: 10px 0 !important;
+}

@@ -13,16 +13,22 @@ const errorMessage = () => {
 
 const config = { headers: { 'content-type': 'multipart/form-data' } };
 
-export const register = async (userData) => {
-	return await instance.post('/signup', userData, config).catch(errorMessage);
-};
-
 export const auth = async () => {
 	return await instance.get('/me').catch({ data: { success: false } });
 };
 
+export const register = async (userData) => {
+	return await instance.post('/signup', userData).catch(errorMessage);
+};
+
 export const login = async (userData) => {
 	return await instance.post('/login', userData).catch(errorMessage);
+};
+
+export const getProfile = async (username) => {
+	return await instance
+		.get(`/profile/?username=${username}`)
+		.catch(errorMessage);
 };
 
 export const update = async (userData) => {
@@ -34,9 +40,13 @@ export const secession = async (username) => {
 };
 
 export const nickCheck = async (nickname) => {
-	return await instance.get(`check/?nickname=${nickname}`).catch(errorMessage);
+	return await instance
+		.get(`nickCheck/?nickname=${nickname}`)
+		.catch(errorMessage);
 };
 
 export const nameCheck = async (username) => {
-	return await instance.get(`check/?username=${username}`).catch(errorMessage);
+	return await instance
+		.get(`userCheck/?username=${username}`)
+		.catch(errorMessage);
 };

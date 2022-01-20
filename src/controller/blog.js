@@ -20,9 +20,12 @@ export const getListByUser = async (username) => {
 export const create = async (postData) => {
 	return await instance.post('/', postData).catch(errorMessage);
 };
-export const update = async (id, postData) => {
+export const writingUpdate = async (id, postData) => {
 	return await instance.put(`/?id=${id}`, postData).catch(errorMessage);
 };
 export const remove = async (id) => {
 	return await instance.delete(`/?id=${id}`).catch(errorMessage);
+};
+export const likeUpdate = async (id) => {
+	return await instance.patch(`/?id=${id}`).catch(errorMessage);
 };

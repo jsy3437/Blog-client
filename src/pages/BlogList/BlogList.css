@@ -1,0 +1,112 @@
+.list_wrap {
+	/* background-color: #0084ff09; */
+	/* max-width: 1500px; */
+	border: 1px solid #0084ff25;
+	margin: auto;
+	padding: 10px 0;
+}
+
+.list_menu_box {
+	display: flex;
+	border-bottom: 1px solid #bdbdbd;
+	max-width: 1500px;
+	margin: auto;
+}
+
+.list_menu_box > li {
+	font-size: 2rem;
+	margin: 20px 30px 0px;
+	padding: 5px 10px;
+}
+
+.list_menu_box > .active {
+	transition: all 500ms ease;
+	border-bottom: 3px solid #0084ff7e;
+}
+
+.list_box > li > h2 {
+	font-size: 2.3rem;
+	text-align: start;
+	margin: 10px 0;
+}
+
+.list_box {
+	max-width: 800px;
+	margin: auto;
+}
+
+.list_box > li {
+	border-radius: 5% 0 5% 5%;
+	padding: 20px;
+	margin: 20px;
+	background-color: #fff;
+	border: 1px solid #0084ff21;
+}
+
+.list_author {
+	display: flex;
+	align-items: center;
+}
+
+.list_author > img {
+	width: 70px;
+	height: 70px;
+	border-radius: 50%;
+	margin-right: 10px;
+}
+
+.list_author > div {
+	text-align: start;
+	font-size: 1.2rem;
+}
+
+.list_nickname {
+	width: fit-content;
+	cursor: pointer;
+}
+
+.list_title,
+.list_text {
+	cursor: pointer;
+}
+
+.list_text {
+	margin: 10px 0;
+	text-align: start;
+	font-size: 1.5rem;
+	border-bottom: 2px solid #0084ff1e;
+	border-top: 2px solid #0084ff1e;
+	border-radius: 1%;
+	padding: 30px;
+}
+
+.list_comment_box {
+	display: flex;
+	align-items: baseline;
+}
+
+.list_comment_box > p:nth-child(2) {
+	font-size: 1.2rem;
+	color: #7e7d7d;
+}
+
+.list_likeIcon {
+	position: relative;
+	font-size: 2rem;
+	width: 60px;
+	margin-left: 10px;
+}
+
+.list_likeIcon::before {
+	position: absolute;
+	width: 2rem;
+	height: 20px;
+	content: '';
+	background-image: url(../../images/heart.svg);
+	top: 15%;
+	left: 0;
+}
+
+.list_pageNum_box {
+	margin: 50px 0 40px;
+}

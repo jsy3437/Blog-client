@@ -17,16 +17,13 @@ function Register() {
 		const { name, value } = e.target;
 		switch (name) {
 			case 'username':
-				return setUsername({ ...username, name: value });
+				return setUsername(value);
 			case 'nickname':
-				return setNickname({ ...nickname, nickname: value });
+				return setNickname(value);
 			case 'password':
-				return setPassword({ ...password, password: value });
+				return setPassword(value);
 			case 'passwordConfirm':
-				return setPasswordConfirm({
-					...passwordConfirm,
-					passwordConfirm: value,
-				});
+				return setPasswordConfirm(value);
 			// no default
 		}
 	};
@@ -39,6 +36,9 @@ function Register() {
 				const { success } = res.data;
 				if (success) {
 					setOverlap({ ...overlap, nickname: true });
+					return alert('사용 가능한 닉네임 입니다');
+				} else {
+					return alert('사용 불가');
 				}
 			});
 		} else if (name === 'nameCheck') {
@@ -46,6 +46,9 @@ function Register() {
 				const { success } = res.data;
 				if (success) {
 					setOverlap({ ...overlap, username: true });
+					return alert('사용 가능한 아이디 입니다');
+				} else {
+					return alert('사용 불가');
 				}
 			});
 		}
@@ -66,11 +69,13 @@ function Register() {
 			password,
 		};
 
+		console.log(body);
+
 		userController.register(body).then((res) => {
-			const { success } = res.data;
+			const { success, nickname } = res.data;
 
 			if (success) {
-				alert('가입완료');
+				alert(`${nickname}님 가입완료`);
 			}
 		});
 	};

@@ -110,3 +110,52 @@ button:hover,
 h1 {
 	font-size: 3rem;
 }
+
+.pagination {
+	display: flex;
+	justify-content: center;
+}
+
+ul.pagination li {
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 1.3rem;
+	margin: 2px;
+}
+
+ul.pagination li > a {
+	padding: 5px;
+}
+
+ul.pagination li:hover {
+	border: 1px solid #0084ff83;
+	margin: 1px;
+}
+
+.strong {
+	background-color: #0084ff83;
+	color: #fff;
+}
+
+.detail_like {
+	cursor: pointer;
+}
+
+.detail_like:hover {
+	transform: scale(1.2);
+}
+
+.like::before {
+	position: absolute;
+	width: 2rem;
+	height: 20px;
+	content: '';
+	background-image: url(./images/heart.svg);
+	top: 15%;
+	left: 0;
+}
